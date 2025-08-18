@@ -118,7 +118,7 @@ function showNotification() {
 
 // Função para adicionar vídeo via prompt (para teste)
 function promptForVideo() {
-    const videoUrl = prompt('Cole aqui o link do YouTube (opcional):');
+    const videoUrl = prompt(https://youtu.be/TdcYfR7NLS0?si=F3vZh9sxSh-yj_Lc);
     if (videoUrl) {
         const videoId = extractYouTubeId(videoUrl);
         if (videoId) {
