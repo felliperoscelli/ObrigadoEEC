@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado por participar e um convite especial!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1>Obrigado por participar e um convite especial!</h1>
+            <p class="subtitle">Sua presença fez toda a diferença. Agora, convido você a fazer parte desta jornada de transformação!</p>
+        </header>
+
+        <!-- Seção do Vídeo -->
+        <section class="video-section">
+            <div class="video-container">
+                <div class="video-placeholder" id="video-placeholder">
+                    <i class="fas fa-play-circle"></i>
+                    <p>Vídeo será adicionado em breve</p>
+                    <small>Clique aqui quando o link do YouTube estiver disponível</small>
+                </div>
+                <!-- O iframe do YouTube será inserido aqui via JavaScript -->
+                <div class="video-iframe" id="video-iframe" style="display: none;">
+                    <!-- YouTube iframe será inserido aqui -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contribuições -->
+        <section class="contributions-section">
+            <h2>Como você pode contribuir com nossa missão</h2>
+            <p class="mission-text">
+                Nosso objetivo é continuar oferecendo workshops de qualidade, gratuitos e acessíveis a todos aqueles que buscam crescimento pessoal e desenvolvimento ao lado de Deus. Você pode nos ajudar de três maneiras especiais:
+            </p>
+
+            <div class="contribution-cards">
+                <!-- Card 1: Oração -->
+                <div class="card prayer-card">
+                    <div class="card-icon">
+                        <i class="fas fa-praying-hands"></i>
+                    </div>
+                    <h3>Orando por Nós</h3>
+                    <p>Suas orações são essenciais para nos guiar enquanto trabalhamos para ajudar o máximo de pessoas a desenvolver um relacionamento íntimo com nosso Pai.</p>
+                    <div class="card-action">
+                        <button class="btn-primary" onclick="showPrayerMessage()">
+                            <i class="fas fa-heart"></i>
+                            Quero Orar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Workshop -->
+                <div class="card workshop-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Levando Workshops para seu Grupo</h3>
+                    <p>Ao levar um de nossos workshops para seu grupo, você expande o alcance dessa jornada e permite que mais pessoas experimentem a transformação.</p>
+                    <div class="card-action">
+                        <button class="btn-primary" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                            Agendar Workshop
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: PIX -->
+                <div class="card donation-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Contribuindo Financeiramente</h3>
+                    <p>Se nossa palestra fez diferença em sua vida, considere fazer uma doação proporcional ao valor que atribuiu a esta experiência.</p>
+                    <div class="pix-info">
+                        <p><strong>Chave PIX:</strong></p>
+                        <div class="pix-key">
+                            <span id="pix-key">fellipe.roscelli@gmail.com</span>
+                            <button class="btn-copy" onclick="copyPixKey()">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-action">
+                        <button class="btn-primary" onclick="copyPixKey()">
+                            <i class="fas fa-copy"></i>
+                            Copiar Chave PIX
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Agradecimento Final -->
+        <section class="final-thanks">
+            <div class="thanks-content">
+                <h3>Gratidão Infinita</h3>
+                <p>Agradecemos profundamente por seu apoio contínuo e por fazer parte desta comunidade de crescimento e transformação. Juntos, podemos criar um impacto positivo e duradouro na vida de muitos outros.</p>
+                <div class="contact-info">
+                    <p><strong>Dúvidas ou sugestões?</strong></p>
+                    <button class="btn-secondary" onclick="openWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                        Fale Conosco
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal para mensagem de oração -->
+    <div id="prayer-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePrayerModal()">&times;</span>
+            <div class="modal-header">
+                <i class="fas fa-praying-hands"></i>
+                <h3>Obrigado por Orar por Nós!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Sua oração é um presente precioso. Pedimos especialmente por:</p>
+                <ul>
+                    <li>Sabedoria para guiar as pessoas em sua jornada espiritual</li>
+                    <li>Discernimento para criar conteúdo que realmente transforme vidas</li>
+                    <li>Perseverança para alcançar cada vez mais pessoas</li>
+                    <li>Que Deus abençoe abundantemente sua vida também</li>
+                </ul>
+                <p><strong>Que Deus abençoe você ricamente!</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificação de cópia -->
+    <div id="copy-notification" class="notification">
+        <i class="fas fa-check-circle"></i>
+        Chave PIX copiada para a área de transferência!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
