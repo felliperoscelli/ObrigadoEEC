@@ -11,7 +11,7 @@ function addYouTubeVideo(videoId) {
         // Criar iframe do YouTube
         iframe.innerHTML = `
             <iframe 
-                src="https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1" 
+                src="https://youtu.be/TdcYfR7NLS0?si=F3vZh9sxSh-yj_Lc" 
                 title="Vídeo de Agradecimento"
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
