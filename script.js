@@ -2,16 +2,19 @@
 const WHATSAPP_NUMBER = '64984547250';
 const PIX_KEY = 'fellipe.roscelli@gmail.com';
 
+// ID do vídeo do YouTube (atualizado com o link fornecido)
+const YOUTUBE_VIDEO_ID = 'TdcYfR7NLS0'; 
+
 // Função para adicionar vídeo do YouTube
 function addYouTubeVideo(videoId) {
     const placeholder = document.getElementById('video-placeholder');
     const iframe = document.getElementById('video-iframe');
     
     if (videoId) {
-        // Criar iframe do YouTube
+        // Criar iframe do YouTube com autoplay
         iframe.innerHTML = `
             <iframe 
-                src="https://youtu.be/TdcYfR7NLS0?si=F3vZh9sxSh-yj_Lc" 
+                src="https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&autoplay=1" 
                 title="Vídeo de Agradecimento"
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -118,7 +121,7 @@ function showNotification() {
 
 // Função para adicionar vídeo via prompt (para teste)
 function promptForVideo() {
-    const videoUrl = prompt(https://youtu.be/TdcYfR7NLS0?si=F3vZh9sxSh-yj_Lc);
+    const videoUrl = prompt('Cole aqui o link do YouTube (opcional):');
     if (videoUrl) {
         const videoId = extractYouTubeId(videoUrl);
         if (videoId) {
@@ -136,12 +139,14 @@ function loadSavedVideo() {
     const savedVideoId = localStorage.getItem('youtubeVideoId');
     if (savedVideoId) {
         addYouTubeVideo(savedVideoId);
+    } else if (YOUTUBE_VIDEO_ID) { // Carrega o vídeo padrão se não houver um salvo
+        addYouTubeVideo(YOUTUBE_VIDEO_ID);
     }
 }
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
-    // Carregar vídeo salvo se existir
+    // Carregar vídeo salvo ou padrão
     loadSavedVideo();
     
     // Adicionar evento de clique no placeholder do vídeo
