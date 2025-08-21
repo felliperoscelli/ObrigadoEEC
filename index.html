@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado por participar e um convite especial!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Página Principal -->
+        <div id="main-page" class="page" style="display: block;">
+            <header class="header">
+                <h1>Obrigado por participar e um convite especial!</h1>
+                <p class="subtitle">Sua presença fez toda a diferença. Agora, convido você a fazer parte desta jornada de transformação!</p>
+            </header>
+
+            <!-- Seção do Vídeo -->
+            <section class="video-section">
+                <div class="video-container">
+                    <div class="video-placeholder" id="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <p>Vídeo será adicionado em breve</p>
+                        <small>Clique aqui quando o link do YouTube estiver disponível</small>
+                    </div>
+                    <div class="video-iframe" id="video-iframe" style="display: none;"></div>
+                </div>
+            </section>
+
+            <!-- Seção de Contribuição -->
+            <section class="contribution-section">
+                <h2>Como você pode contribuir com nossa missão</h2>
+                <p>Nosso objetivo é continuar oferecendo workshops de qualidade, gratuitos e acessíveis a todos aqueles que buscam crescimento pessoal e desenvolvimento ao lado de Deus. Você pode nos ajudar de três maneiras especiais:</p>
+                
+                <div class="cards-container">
+                    <!-- Card 1: Oração -->
+                    <div class="card prayer-card">
+                        <div class="card-icon">
+                            <i class="fas fa-praying-hands"></i>
+                        </div>
+                        <h3>Orando por Nós</h3>
+                        <p>Suas orações são essenciais para nos guiar enquanto trabalhamos para ajudar o máximo de pessoas a desenvolver um relacionamento íntimo com nosso Pai.</p>
+                        <div class="card-action">
+                            <button class="btn-primary" onclick="showPrayerMessage()">
+                                <i class="fas fa-heart"></i>
+                                Quero Orar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Workshop -->
+                    <div class="card workshop-card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Levando Workshops para seu Grupo</h3>
+                        <p>Ao levar um de nossos workshops para seu grupo, você expande o alcance dessa jornada e permite que mais pessoas experimentem a transformação.</p>
+                        <div class="card-action">
+                            <button class="btn-primary" onclick="openWhatsApp()">
+                                <i class="fab fa-whatsapp"></i>
+                                Agendar Workshop
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Kombihome Missionária -->
+                    <div class="card donation-card">
+                        <div class="card-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Kombihome Missionária</h3>
+                        <p>Ajude-nos a construir uma casa sobre rodas para levar esperança e transformação para famílias em locais de difícil acesso em todo Goiás.</p>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%"></div>
+                            </div>
+                            <p class="progress-text">Meta: R$ 65.000 | Arrecadado: R$ 9.750</p>
+                        </div>
+                        <div class="card-action">
+                            <button class="btn-primary" onclick="showKombihomePage()">
+                                <i class="fas fa-info-circle"></i>
+                                Ver Projeto Completo
+                            </button>
+                            <button class="btn-secondary" onclick="copyPixKey()" style="margin-top: 10px;">
+                                <i class="fas fa-copy"></i>
+                                Doar via PIX
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Final -->
+            <section class="final-section">
+                <h2>Gratidão Infinita</h2>
+                <p>Agradecemos profundamente por seu apoio contínuo e por fazer parte desta comunidade de crescimento e transformação. Juntos, podemos criar um impacto positivo e duradouro na vida de muitos outros.</p>
+                
+                <div class="contact-section">
+                    <p><strong>Dúvidas ou sugestões?</strong></p>
+                    <button class="btn-secondary" onclick="openWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                        Fale Conosco
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Página do Projeto Kombihome Missionária -->
+        <section id="kombihome-page" class="page" style="display: none;">
+            <div class="kombihome-header">
+                <button class="btn-back-kombihome" onclick="showMainPage()">
+                    <i class="fas fa-arrow-left"></i>
+                    Voltar
+                </button>
+                <h1>Projeto Kombihome Missionária</h1>
+                <h2>Leve Esperança Sobre Rodas: Uma Casa para a Missão</h2>
+                <p class="subtitle">Fortalecendo Famílias, Um Quilômetro por Vez</p>
+            </div>
+
+            <div class="project-intro">
+                <p>Minha missão é levar uma palavra de esperança e restauração para as famílias através de palestras sobre relacionamento familiar. Hoje, meu coração arde com um sonho: expandir este trabalho para os cantos mais distantes e necessitados do nosso estado de Goiás.</p>
+                
+                <div class="vision-box">
+                    <h3><i class="fas fa-eye"></i> A Visão</h3>
+                    <p>Muitas igrejas e comunidades em cidades menores ou de difícil acesso anseiam por receber este ministério. A solução é um <strong>Motorhome Missionário</strong> - uma "casa sobre rodas" que nos permitirá:</p>
+                    <ul>
+                        <li>Eliminar custos de hospedagem para as igrejas anfitriãs</li>
+                        <li>Alcançar vilarejos e zonas rurais</li>
+                        <li>Ter flexibilidade para permanecer mais tempo em cada comunidade</li>
+                        <li>Ser uma base missionária móvel</li>
+                    </ul>
+                </div>
+
+                <div class="project-progress-main">
+                    <h3><i class="fas fa-chart-line"></i> Progresso do Projeto</h3>
+                    <div class="progress-bar-main">
+                        <div class="progress-fill-main" style="width: 15%"></div>
+                    </div>
+                    <div class="progress-info">
+                        <span>R$ 9.750 arrecadado</span>
+                        <span>Meta: R$ 65.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-section">
+                <h2><i class="fas fa-road"></i> Do Sonho à Realidade - Nossa Jornada Juntos</h2>
+                <p class="timeline-instruction">
+                    <i class="fas fa-hand-pointer"></i>
+                    Toque na etapa desejada para saber mais
+                </p>
+                
+                <div class="timeline">
+                    <!-- Fase 1 -->
+                    <div class="timeline-item" onclick="togglePhase(1)">
+                        <div class="timeline-marker">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Fase 1: A Base de Tudo - Compra e Preparação da Kombi</h3>
+                            <p class="phase-budget">R$ 17.300 - R$ 40.500</p>
+                            <div class="phase-details" id="phase-1" style="display: none;">
+                                <p><strong>Objetivo:</strong> Adquirir uma Kombi com boa estrutura e garantir que sua mecânica esteja 100% confiável para as estradas da missão.</p>
+                                <p><strong>Ações:</strong> Pesquisa, inspeção mecânica, compra, transferência e manutenção preventiva completa.</p>
+                                <div class="phase-status completed">
+                                    <i class="fas fa-check-circle"></i>
+                                    Concluída
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fase 2 -->
+                    <div class="timeline-item" onclick="togglePhase(2)">
+                        <div class="timeline-marker">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Fase 2: A Estrutura - Serralheria e Reforço</h3>
+                            <p class="phase-budget">R$ 2.500 - R$ 4.500</p>
+                            <div class="phase-details" id="phase-2" style="display: none;">
+                                <p><strong>Objetivo:</strong> Preparar o "esqueleto" do motorhome, garantindo a segurança e a base para o teto alto e a barraca.</p>
+                                <p><strong>Ações:</strong> Construção de uma gaiola de reforço interna, corte do teto original e construção da estrutura do teto elevado.</p>
+                                <div class="phase-status in-progress">
+                                    <i class="fas fa-cog fa-spin"></i>
+                                    Em Andamento
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fase 3 -->
+                    <div class="timeline-item" onclick="togglePhase(3)">
+                        <div class="timeline-marker">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Fase 3: O 2º Andar - A Barraca de Teto</h3>
+                            <p class="phase-budget">R$ 3.800 - R$ 7.800</p>
+                            <div class="phase-details" id="phase-3" style="display: none;">
+                                <p><strong>Objetivo:</strong> Construir o dormitório, um espaço seguro e confortável para descanso.</p>
+                                <p><strong>Ações:</strong> Fabricação da tampa da barraca com design aerodinâmico, instalação do sistema de elevação motorizado e confecção da lona impermeável.</p>
+                                <div class="phase-status pending">
+                                    <i class="fas fa-clock"></i>
+                                    Aguardando
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fase 4 -->
+                    <div class="timeline-item" onclick="togglePhase(4)">
+                        <div class="timeline-marker">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Fase 4: O Coração - Sistema de Energia Solar</h3>
+                            <p class="phase-budget">R$ 4.200 - R$ 8.100</p>
+                            <div class="phase-details" id="phase-4" style="display: none;">
+                                <p><strong>Objetivo:</strong> Garantir autonomia elétrica para chegar a locais sem energia, usando uma fonte limpa e sustentável.</p>
+                                <p><strong>Ações:</strong> Instalação da placa solar, bateria estacionária, controlador de carga e toda a fiação para luzes e tomadas.</p>
+                                <div class="phase-status pending">
+                                    <i class="fas fa-clock"></i>
+                                    Aguardando
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fase 5 -->
+                    <div class="timeline-item" onclick="togglePhase(5)">
+                        <div class="timeline-marker">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Fase 5: Conforto e Saúde - Sistema Hidráulico e Gás</h3>
+                            <p class="phase-budget">R$ 1.500 - R$ 2.800</p>
+                            <div class="phase-details" id="phase-5" style="display: none;">
+                                <p><strong>Objetivo:</strong> Montar a estrutura de água e gás para a cozinha e o banheiro.</p>
+                                <p><strong>Ações:</strong> Instalação das caixas d'água, bomba, aquecedor de passagem a gás e todo o encanamento.</p>
+                                <div class="phase-status pending">
+                                    <i class="fas fa-clock"></i>
+                                    Aguardando
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fase 6 -->
+                    <div class="timeline-item" onclick="togglePhase(6)">
+                        <div class="timeline-marker">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Fase 6: O Lar - Marcenaria e Interior</h3>
+                            <p class="phase-budget">R$ 6.000 - R$ 11.600</p>
+                            <div class="phase-details" id="phase-6" style="display: none;">
+                                <p><strong>Objetivo:</strong> Transformar o interior da Kombi em um ambiente funcional e acolhedor.</p>
+                                <p><strong>Ações:</strong> Isolar e revestir as paredes, construir o banheiro, a cozinha, os armários e o sofá-cama.</p>
+                                <div class="phase-status pending">
+                                    <i class="fas fa-clock"></i>
+                                    Aguardando
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fase 7 -->
+                    <div class="timeline-item" onclick="togglePhase(7)">
+                        <div class="timeline-marker">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Fase 7: A Identidade Visual - Pintura e Acabamento</h3>
+                            <p class="phase-budget">R$ 4.400 - R$ 8.900</p>
+                            <div class="phase-details" id="phase-7" style="display: none;">
+                                <p><strong>Objetivo:</strong> Dar ao veículo uma aparência profissional e que comunique claramente sua missão.</p>
+                                <p><strong>Ações:</strong> Preparação da lataria, pintura completa e aplicação de adesivos com a identidade do projeto.</p>
+                                <div class="phase-status pending">
+                                    <i class="fas fa-clock"></i>
+                                    Aguardando
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fase 8 -->
+                    <div class="timeline-item" onclick="togglePhase(8)">
+                        <div class="timeline-marker">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Fase 8: A Legalização - Documentação Final</h3>
+                            <p class="phase-budget">R$ 1.800 - R$ 3.500</p>
+                            <div class="phase-details" id="phase-8" style="display: none;">
+                                <p><strong>Objetivo:</strong> Regularizar o veículo junto aos órgãos de trânsito para rodar com segurança e dentro da lei.</p>
+                                <p><strong>Ações:</strong> Obtenção do laudo de engenharia (CSV) e alteração do documento para "Motor-Casa".</p>
+                                <div class="phase-status pending">
+                                    <i class="fas fa-clock"></i>
+                                    Aguardando
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="donation-section">
+                <h2><i class="fas fa-heart"></i> Faça Parte Desta Missão!</h2>
+                <p>Sua contribuição, de qualquer valor, é um ato de fé e um investimento direto em famílias que serão alcançadas por este ministério.</p>
+                <blockquote>
+                    "Cada um contribua segundo propôs no seu coração; não com tristeza, ou por necessidade; porque Deus ama ao que dá com alegria." 
+                    <cite>- 2 Coríntios 9:7</cite>
+                </blockquote>
+                
+                <div class="donation-options">
+                    <div class="donation-card-simple">
+                        <h3><i class="fas fa-mobile-alt"></i> PIX</h3>
+                        <p>Chave: <strong>fellipe.roscelli@gmail.com</strong></p>
+                        <button class="btn-primary" onclick="copyPixKey()">
+                            <i class="fas fa-copy"></i>
+                            Copiar Chave PIX
+                        </button>
+                    </div>
+                    
+                    <div class="donation-card-simple">
+                        <h3><i class="fab fa-whatsapp"></i> Dúvidas?</h3>
+                        <p>Entre em contato conosco</p>
+                        <button class="btn-primary" onclick="openWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                            Fale Conosco
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal para mensagem de oração -->
+    <div id="prayer-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closePrayerModal()">&times;</span>
+                <div class="modal-icon">
+                    <i class="fas fa-praying-hands"></i>
+                </div>
+                <h2>Obrigado por Orar por Nós!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Sua oração é um presente precioso. Pedimos especialmente por:</p>
+                <ul>
+                    <li>Sabedoria para guiar as pessoas em sua jornada espiritual</li>
+                    <li>Discernimento para criar conteúdo que realmente transforme vidas</li>
+                    <li>Perseverança para alcançar cada vez mais pessoas</li>
+                    <li>Que Deus abençoe abundantemente sua vida também</li>
+                </ul>
+                <p><strong>Que Deus abençoe você ricamente!</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificação de cópia -->
+    <div id="copy-notification" class="notification">
+        <i class="fas fa-check-circle"></i>
+        Chave PIX copiada para a área de transferência!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

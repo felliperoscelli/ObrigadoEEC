@@ -232,3 +232,80 @@ function handleOrientationChange() {
 window.addEventListener('orientationchange', handleOrientationChange);
 window.addEventListener('resize', handleOrientationChange);
 
+
+
+// Funções para navegação entre páginas
+function showKombihomePage() {
+    document.getElementById('main-page').style.display = 'none';
+    document.getElementById('kombihome-page').style.display = 'block';
+    
+    // Scroll para o topo
+    window.scrollTo(0, 0);
+    
+    // Animar barra de progresso
+    setTimeout(() => {
+        const progressBar = document.querySelector('.progress-fill-main');
+        if (progressBar) {
+            progressBar.style.width = '15%';
+        }
+    }, 500);
+}
+
+function showMainPage() {
+    document.getElementById('kombihome-page').style.display = 'none';
+    document.getElementById('main-page').style.display = 'block';
+    
+    // Scroll para o topo
+    window.scrollTo(0, 0);
+}
+
+// Função para expandir/recolher fases da timeline
+function togglePhase(phaseNumber) {
+    const phaseDetails = document.getElementById(`phase-${phaseNumber}`);
+    const isVisible = phaseDetails.style.display === 'block';
+    
+    // Fechar todas as outras fases
+    for (let i = 1; i <= 8; i++) {
+        const otherPhase = document.getElementById(`phase-${i}`);
+        if (otherPhase && i !== phaseNumber) {
+            otherPhase.style.display = 'none';
+        }
+    }
+    
+    // Alternar a fase clicada
+    if (isVisible) {
+        phaseDetails.style.display = 'none';
+    } else {
+        phaseDetails.style.display = 'block';
+        
+        // Scroll suave para a fase expandida
+        setTimeout(() => {
+            phaseDetails.scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest'
+            });
+        }, 100);
+    }
+}
+
+// Atualizar as instruções no console
+console.log(`
+🎥 INSTRUÇÕES PARA ADICIONAR VÍDEO:
+
+1. Para adicionar um vídeo do YouTube:
+   addVideo('https://www.youtube.com/watch?v=SEU_VIDEO_ID')
+
+2. Para remover o vídeo:
+   removeVideo()
+
+3. Ou clique no placeholder do vídeo na página
+
+🏠 NAVEGAÇÃO:
+- showKombihomePage() - Ir para página do projeto
+- showMainPage() - Voltar para página principal
+
+📱 CONTATOS:
+- WhatsApp: ${WHATSAPP_NUMBER}
+- PIX: ${PIX_KEY}
+`);
+
