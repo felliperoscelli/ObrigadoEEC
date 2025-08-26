@@ -76,7 +76,9 @@ body {
 .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 177.77%; /* 9:16 Aspect Ratio (9 / 16 * 100) for vertical video */
+    max-width: 400px;   /* limite no desktop */
+    margin: 0 auto;     /* centralizar */
+    padding-bottom: 177.77%; /* retrato 9:16 */
     height: 0;
     overflow: hidden;
     border-radius: var(--border-radius);
@@ -285,16 +287,15 @@ body {
 /* Modal */
 .modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;  /* mantém centralizado */
     align-items: center;
 }
 
@@ -376,7 +377,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     font-size: 1.1em;
-    display: flex;
     align-items: center;
     z-index: 1001;
     animation: slideInUp 0.5s ease-out;
@@ -867,6 +867,10 @@ body {
         flex: 1 1 90%;
         max-width: 400px;
     }
+    .video-container {
+        max-width: 100%;     /* no celular ocupa largura toda */
+        padding-bottom: 177.77%; /* mantém retrato */
+    }
 }
 
 @media (max-width: 480px) {
@@ -905,4 +909,9 @@ body {
     }
 }
 
-
+@media (min-width: 769px) {
+    .video-container {
+        max-width: 600px;
+        padding-bottom: 56.25%; /* 16:9 */
+    }
+}
