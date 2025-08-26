@@ -235,9 +235,9 @@ window.addEventListener('resize', handleOrientationChange);
 
 
 // Funções para navegação entre páginas
-function showKombihomePage() {
+function showMotoPage() {
     document.getElementById('main-page').style.display = 'none';
-    document.getElementById('kombihome-page').style.display = 'block';
+    document.getElementById('moto-page').style.display = 'block';
     
     // Scroll para o topo
     window.scrollTo(0, 0);
@@ -246,13 +246,13 @@ function showKombihomePage() {
     setTimeout(() => {
         const progressBar = document.querySelector('.progress-fill-main');
         if (progressBar) {
-            progressBar.style.width = '15%';
+            progressBar.style.width = '0%';
         }
-    }, 500);
+    }, 100);
 }
 
 function showMainPage() {
-    document.getElementById('kombihome-page').style.display = 'none';
+    document.getElementById('moto-page').style.display = 'none';
     document.getElementById('main-page').style.display = 'block';
     
     // Scroll para o topo
