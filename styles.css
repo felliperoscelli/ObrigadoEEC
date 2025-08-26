@@ -195,7 +195,7 @@ body {
     width: 100%;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary {
     display: block;
     width: 100%;
     padding: 12px 20px;
@@ -220,46 +220,9 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.btn-secondary {
-    background-color: #ccc;
-    color: var(--text-color);
-}
 
-.btn-secondary:hover {
-    background-color: #bbb;
-    transform: translateY(-2px);
-}
-
-.btn-primary i, .btn-secondary i {
+.btn-primary i {
     margin-right: 10px;
-}
-
-/* Progresso do Projeto */
-.project-progress {
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-.progress-bar {
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    height: 10px;
-    overflow: hidden;
-    margin-bottom: 5px;
-}
-
-.progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #4CAF50, #8BC34A); /* Green gradient */
-    border-radius: 5px;
-    width: 0%; /* Initial width */
-    transition: width 1s ease-in-out;
-}
-
-.progress-text {
-    font-size: 0.9em;
-    color: #666;
 }
 
 /* Seção Final */
